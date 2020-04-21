@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>关于我&amp;联系我 | 小雨</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="关于我&amp;联系我 | 小雨">
+  <title>Android Studio之启动界面开发 | 小雨</title>
+  <meta name="keywords" content=" Android Studio , 启动界面 ">
+  <meta name="description" content="Android Studio之启动界面开发 | 小雨">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介  小雨， 在校大学生，软件技术专业。 喜欢研究新兴技术和未来发展方向。 最近 忙于实习和转本。 联系方式  QQ：1908918989  邮箱：1908918989@qq.com">
 <meta property="og:type" content="website">
@@ -327,24 +327,38 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-Android Studio之启动界面开发" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">关于我&amp;联系我</h1>
+        <h1 class="article-title">Android Studio之启动界面开发</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            
+                <a  data-rel="Android">Android</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a class="color5">Android Studio</a>
+            
+            <a class="color5">启动界面</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-04-20 17:48:27'>2020-04-20 15:13</time>
+        创建时间:<time class="date" title='更新时间: 2020-04-21 09:32:53'>2019-12-14 09:03</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:52</span>
+        <span>字数:1.3k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -390,20 +404,78 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>个人简介</strong></p>
-<hr>
-<p>小雨，</p>
-<p>在校大学生，软件技术专业。</p>
-<p>喜欢研究新兴技术和未来发展方向。</p>
-<p><strong>最近</strong></p>
-<p>忙于实习和转本。</p>
-<p><strong>联系方式</strong></p>
-<ul>
-<li><p>QQ：1908918989</p>
-</li>
-<li><p>邮箱：<a href="mailto:1908918989@qq.com">1908918989@qq.com</a></p>
-</li>
-</ul>
+        <p>一到学期末，事情就特别多，各种项目，各种作业，各种考核……<br>作为一名Android小白，面临着Android期末项目化考核，做学生嘛，肯定是要有取舍的，当听到老师说期末考试是笔试的时候，我直接就不听课了，听了有啥用，反正又不需要做项目，没想到快到期末了突然又要改项目化考核，我人傻了……无奈之下，熬了几个通宵，2倍速看完了全套Android网课教程，现在分阶段、分模块、分界面整理一下。</p>
+<p>###首先，先手动创建一个项目。</p>
+<blockquote>
+<p>第一步，新建一个项目，如图所示。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19863197-39182bd59d10edd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="第一步.png"></p>
+<blockquote>
+<p>第二步，选择如图所示的Activity，然后单击下一步。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19863197-098a46fa0617b004.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="第二步.png"></p>
+<blockquote>
+<p>第三步，按顺序填写项目名称，包名和存储路径，注意：语言一定要选Java，选好后单击Finish</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19863197-609aeb8a381b87a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="第三步.png"></p>
+<blockquote>
+<p>然后，就来到了主界面，此时单击如图所示的按钮。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19863197-1da699edaf3bbaf0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<p>单击这个按钮后，会有大概5秒左右的延迟，如果你看到如图所示的界面，说明你的环境是OK的，就可以进入正题了，如果没有看到如图所示的界面，那么你最好看看你的AVDManager是否存在问题，解决这些问题请自行百度。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19863197-bced02bf5e118cce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="如果没有这个界面请自行百度"></p>
+<blockquote>
+<p>接下来，先实现启动界面背景图片。<br>第一步，将左上角的Android切换成Project，找到MainActivity，在同一目录下创建一个新activity，创建方法，与之前相同，这里不再赘述。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19863197-d0703b97b7139ad1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<p>创建完成后，将会看到如下图所示的启动界面Activity。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19863197-d2d85789c17cfb11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<p>然后，需要上传一张图片，放在drawable目录下，作为启动界面图片。这里的bcg.jpg是我上传的，大家可以自行选择喜欢的图片进行运用，格式不限，jpg或png均可。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19863197-763a779fa64c6407.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<p>打开activity_welcome.xml文件，改成LinerLayout布局，添加代码，让启动界面拥有图片和倒计时文本框</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19863197-596fb98a85b4b440.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<p>这里直接上activity_welcome.xml代码，不用客气。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res&#x2F;android&quot;</span><br><span class="line">    xmlns:app&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;apk&#x2F;res-auto&quot;</span><br><span class="line">    xmlns:tools&#x3D;&quot;http:&#x2F;&#x2F;schemas.android.com&#x2F;tools&quot;</span><br><span class="line">    android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">    android:layout_height&#x3D;&quot;match_parent&quot;</span><br><span class="line">    tools:context&#x3D;&quot;.WelcomeActivity&quot;</span><br><span class="line">    android:background&#x3D;&quot;@drawable&#x2F;bcg&quot;</span><br><span class="line">    &gt;</span><br><span class="line">    &lt;RelativeLayout</span><br><span class="line"></span><br><span class="line">        android:layout_width&#x3D;&quot;match_parent&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;wrap_content&quot;&gt;</span><br><span class="line"></span><br><span class="line">        &lt;TextView</span><br><span class="line">            android:id&#x3D;&quot;@+id&#x2F;tv&quot;</span><br><span class="line">            android:layout_width&#x3D;&quot;wrap_content&quot;</span><br><span class="line">            android:layout_height&#x3D;&quot;wrap_content&quot;</span><br><span class="line">            android:layout_alignParentRight&#x3D;&quot;true&quot;</span><br><span class="line">            android:layout_marginRight&#x3D;&quot;20dp&quot;</span><br><span class="line">            android:layout_marginTop&#x3D;&quot;10dp&quot;</span><br><span class="line">            android:textSize&#x3D;&quot;20sp&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;RelativeLayout&gt;</span><br><span class="line">&lt;&#x2F;LinearLayout&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>可以通过点击界面最右侧的preview按钮，查看上述步骤是否正确。可以看到，我这里已经有了一个图片及上方文本框。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19863197-d3c187e86d1e9b02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<p>我们肯定是要先跑启动页，再跑主页，所有我们要配置启动顺序，找到AndroidMainfest.xml文件，按照如图所示，将intent代码块放在WelcomeActivity里面</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19863197-578e282f2d6de535.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/19863197-f9fe9db1a0904ad9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<p>找到styles.xml文件，添加一个主题，目的是消除界面上方绿色的标题栏</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19863197-e81c342ab42191ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/19863197-b52c522a7f6de7c9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<p>再回到AndroidManifest.xml文件，添加如图所示的这句代码，调用刚刚添加的style主题样式</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19863197-01c2c46f79d9ff39.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<p>接下来，Activity中总体来说，很简单，但如果大家第一次接触Android可能会觉得有点难，所以我把代码直接贴出来，能加注释的地方，我都尽量加了注释，如果不懂的话，建议还是系统的学习一下安卓教程。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19863197-8af1096703afa8d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line">package com.wxy.homework;</span><br><span class="line">import androidx.appcompat.app.AppCompatActivity;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.os.Handler;</span><br><span class="line">import android.view.View;</span><br><span class="line">import android.view.WindowManager;</span><br><span class="line">import android.widget.TextView;</span><br><span class="line"></span><br><span class="line">import java.util.Timer;</span><br><span class="line">import  android.content.Intent;</span><br><span class="line">import java.util.TimerTask;</span><br><span class="line">public class WelcomeActivity extends AppCompatActivity implements View.OnClickListener &#123;</span><br><span class="line"></span><br><span class="line">    private int recLen &#x3D; 5;&#x2F;&#x2F;跳过倒计时提示5秒</span><br><span class="line">    private TextView tv;</span><br><span class="line">    Timer timer &#x3D; new Timer();</span><br><span class="line">    private Handler handler;</span><br><span class="line">    private Runnable runnable;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        &#x2F;&#x2F;定义全屏参数</span><br><span class="line">        int flag&#x3D; WindowManager.LayoutParams.FLAG_FULLSCREEN;</span><br><span class="line">        &#x2F;&#x2F;设置当前窗体为全屏显示</span><br><span class="line">        getWindow().setFlags(flag, flag);</span><br><span class="line">        setContentView(R.layout.activity_welcome);</span><br><span class="line">        initView();</span><br><span class="line">        timer.schedule(task, 1000, 1000);&#x2F;&#x2F;等待时间一秒，停顿时间一秒</span><br><span class="line">        &#x2F;**</span><br><span class="line">         * 正常情况下不点击跳过</span><br><span class="line">         *&#x2F;</span><br><span class="line">        handler &#x3D; new Handler();</span><br><span class="line">        handler.postDelayed(runnable &#x3D; new Runnable() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void run() &#123;</span><br><span class="line">                &#x2F;&#x2F;从闪屏界面跳转到首界面</span><br><span class="line">                Intent intent &#x3D; new Intent(WelcomeActivity.this, MainActivity.class);</span><br><span class="line">                startActivity(intent);</span><br><span class="line">                finish();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, 5000);&#x2F;&#x2F;延迟5S后发送handler信息</span><br><span class="line">    &#125;</span><br><span class="line">    private void initView() &#123;</span><br><span class="line">        tv &#x3D; findViewById(R.id.tv);&#x2F;&#x2F;跳过</span><br><span class="line">        tv.setOnClickListener(this);&#x2F;&#x2F;跳过监听</span><br><span class="line">    &#125;</span><br><span class="line">    TimerTask task &#x3D; new TimerTask() &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void run() &#123;</span><br><span class="line">            runOnUiThread(new Runnable() &#123; &#x2F;&#x2F; UI thread</span><br><span class="line">                @Override</span><br><span class="line">                public void run() &#123;</span><br><span class="line">                    recLen--;</span><br><span class="line">                    tv.setText(&quot;跳过 &quot; + recLen);</span><br><span class="line">                    if (recLen &lt; 0) &#123;</span><br><span class="line">                        timer.cancel();</span><br><span class="line">                        tv.setVisibility(View.GONE);&#x2F;&#x2F;倒计时到0隐藏字体</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 点击跳过</span><br><span class="line">     *&#x2F;</span><br><span class="line">    @Override</span><br><span class="line">    public void onClick(View view) &#123;</span><br><span class="line">        switch (view.getId()) &#123;</span><br><span class="line">            case R.id.tv:</span><br><span class="line">                &#x2F;&#x2F;从闪屏界面跳转到首界面</span><br><span class="line">                Intent intent &#x3D; new Intent(WelcomeActivity.this, MainActivity.class);</span><br><span class="line">                startActivity(intent);</span><br><span class="line">                finish();</span><br><span class="line">                if (runnable !&#x3D; null) &#123;</span><br><span class="line">                    handler.removeCallbacks(runnable);</span><br><span class="line">                &#125;</span><br><span class="line">                break;</span><br><span class="line">            default:</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>最后，激动人心的时候到了，点击运行，<strong>全屏启动欢迎界面</strong>，右上方有倒计时，完美运行</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/19863197-45bedbce77625a17.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>如果你运行成功了，麻烦点赞收藏评论留言，能帮到大家是我最大的荣幸。<br>后续将更新SQLLITE实现登录注册功能，<br>未完待续….</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1908918989@qq.com </span>
@@ -415,6 +487,18 @@
     <a  class="dashang" onclick="dashangToggle()">赏</a>
 </p>
 
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>Android Studio之启动界面开发</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">1.3k</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="小雨">小雨</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-12-14, 09:03:02</p>
+    <p><span class="copy-title">最后更新:</span>2020-04-21, 09:32:53</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/14/Android%20Studio%E4%B9%8B%E5%90%AF%E5%8A%A8%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91/" title="Android Studio之启动界面开发">http://yoursite.com/2019/12/14/Android%20Studio%E4%B9%8B%E5%90%AF%E5%8A%A8%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
 
 
 
