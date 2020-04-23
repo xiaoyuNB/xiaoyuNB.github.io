@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>JDesktopPane如何添加背景图片 | 小雨</title>
-  <meta name="keywords" content=" Java , JDesktopPane , 添加背景 ">
-  <meta name="description" content="JDesktopPane如何添加背景图片 | 小雨">
+  <title>第3章 Java面向对象-封装 | 小雨</title>
+  <meta name="keywords" content=" Java ">
+  <meta name="description" content="第3章 Java面向对象-封装 | 小雨">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介  小雨， 在校大学生，软件技术专业。 喜欢研究新兴技术和未来发展方向。 最近 忙于实习和转本。 联系方式  QQ：1908918989  邮箱：1908918989@qq.com">
 <meta property="og:type" content="website">
@@ -347,9 +347,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-JDesktopPane如何添加背景图片" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-第3章-Java面向对象-封装" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">JDesktopPane如何添加背景图片</h1>
+        <h1 class="article-title">第3章 Java面向对象-封装</h1>
     
     <div class="article-meta">
         
@@ -357,7 +357,9 @@
         
         <span class="book">
             
-                <a  data-rel="Java">Java</a>
+                <a  data-rel="Java">Java</a>/
+            
+                <a  data-rel="Java基础总结">Java基础总结</a>
             
         </span>
         
@@ -366,21 +368,17 @@
             
             <a class="color5">Java</a>
             
-            <a class="color3">JDesktopPane</a>
-            
-            <a class="color5">添加背景</a>
-            
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-04-22 20:46:03'>2020-04-21 09:29</time>
+        创建时间:<time class="date" title='更新时间: 2020-04-23 20:56:53'>2020-04-23 12:22</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:579</span>
+        <span>字数:905</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -410,7 +408,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#最近小编一直在做项目，准备蓝桥杯，准备期末考试，所有一直没有时间更新博文，今日正值周末，小编于图书馆做项目期间，出现了小问题，并解决了，特地来简书更新一波…"><span class="toc-text">最近小编一直在做项目，准备蓝桥杯，准备期末考试，所有一直没有时间更新博文，今日正值周末，小编于图书馆做项目期间，出现了小问题，并解决了，特地来简书更新一波….</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码块"><span class="toc-text">代码块:</span></a>
+        
     
 <style>
     .left-col .switch-btn,
@@ -426,31 +424,141 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="最近小编一直在做项目，准备蓝桥杯，准备期末考试，所有一直没有时间更新博文，今日正值周末，小编于图书馆做项目期间，出现了小问题，并解决了，特地来简书更新一波…"><a href="#最近小编一直在做项目，准备蓝桥杯，准备期末考试，所有一直没有时间更新博文，今日正值周末，小编于图书馆做项目期间，出现了小问题，并解决了，特地来简书更新一波…" class="headerlink" title="最近小编一直在做项目，准备蓝桥杯，准备期末考试，所有一直没有时间更新博文，今日正值周末，小编于图书馆做项目期间，出现了小问题，并解决了，特地来简书更新一波…."></a>最近小编一直在做项目，准备蓝桥杯，准备期末考试，所有一直没有时间更新博文，今日正值周末，小编于图书馆做项目期间，出现了小问题，并解决了，特地来简书更新一波….</h4><blockquote>
-<p>在<code>javaSwing窗口</code>中，我们常使用<code>JdesktopPane面板</code>，它是一个可以装载<code>JInternalFrame</code>的容器。<br>为了整体界面美观，小编在设计JdesktopPane面板时，发现JdesktopPane可以设置背景颜色，但是没有直接为JdesktopPane设置<strong>背景图片</strong>的方法，也不可以给JdesktopPane添加<code>icon</code>。</p>
-</blockquote>
-<blockquote>
-<p>左思右想，小编想出了一个好主意，就是给JdesktopPane面板添加一个<code>JLable标签</code>，将这个JLable标签大小与JdesktopPane面板<strong>大小设置一致</strong>，再给这个JLable标签添加icon，就能成功的给JdesktopPane面板添加背景图片啦！（效果见下图）</p>
-</blockquote>
-<p><img src="/images/35.png" alt="image.png"></p>
-<blockquote>
-<p>高兴之余，小编随即点开了上方的菜单项，发现JInternalFrame子面板不显示了！顿时小编傻了眼，仔细一看在发现，原来设置背景图片的JLable标签，会覆盖住已经弹出的JInternalFrame子面板。也就是说，<strong>JInternalFrame会被JLable标签覆盖住</strong>。小编又傻了。。。</p>
-</blockquote>
-<blockquote>
-<p>在游览了各大论坛和各个大神的技术贴后，我大概知道要<strong>修改叠放层次</strong>，或者说修改面板与组件之间的<strong>显示优先级</strong>。但是论坛大神们总是点睛之笔，或者随手丢下三两行代码，让人依然摸不着头脑。。</p>
-</blockquote>
-<blockquote>
-<p>所谓物极必反，无奈之下，小编灵机一动，想出了一个办法：<strong>每当我点开一个JInternalFrame子容器时，我添加一个点击事件，只要弹出JInternalFrame面板，就立即设置JLable背景标签隐藏（不可见）。</strong>小编亲测有效，疑难杂症终于搞定了。。。（效果见下图）<br><img src="/images/36.png" alt="image.png"></p>
-</blockquote>
-<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块:"></a>代码块:</h3><blockquote>
-<p>添加背景图片：</p>
-</blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">              desktopPane = <span class="keyword">new</span> JDesktopPane();</span><br><span class="line">desktopPane.setBackground(Color.WHITE);</span><br><span class="line">contentPane.add(desktopPane, BorderLayout.CENTER);</span><br><span class="line">backgroundLabel = <span class="keyword">new</span> JLabel(<span class="string">""</span>);</span><br><span class="line">backgroundLabel.setIcon(new ImageIcon(MainFrm.class.getResource("图片路径")));</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>隐藏背景图片：</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">menuItem_3.addActionListener(<span class="keyword">new</span> ActionListener() &#123;</span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent e)</span> </span>&#123;</span><br><span class="line">				backgroundLabel.setVisible(<span class="keyword">false</span>);</span><br><span class="line">				SearchCar searchcar=<span class="keyword">new</span> SearchCar();</span><br><span class="line">				searchcar.setVisible(<span class="keyword">true</span>);</span><br><span class="line">				desktopPane.add(searchcar);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br></pre></td></tr></table></figure>
-<p>###但是小编还是在此呼叫江湖大神，能不能教教小编，面板组件之间的显示优先级是怎么弄的。拜托啦！！！</p>
+        <ul>
+<li><p>变量的定义方式： 数据类型  变量名 = 值 ;</p>
+</li>
+<li><p>1.成员变量：直接定义在类中的变量</p>
+<p>  成员变量会自动初始化</p>
+</li>
+</ul>
+<p>类成员变量：在成员变量前加static，就是类成员变量<br>    实例成员变量：没加static就是实例成员变量<br>    *<em>注意：在方法当中，不能定义static变量 *</em></p>
+<ul>
+<li><p>2.局部变量：定义在方法当中的变量（参数，和内部定义的变量，代码块）</p>
+<p><strong>注：必须要初始化后才能使用</strong> </p>
+</li>
+</ul>
+<ul>
+<li>垃圾对象：当一个变量的值为null时，则表示该变量不指向任何一个对象。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">private</th>
+<th>表示私有的，表示类访问权限，只能在本类中访问，离开本类之后，就不能直接访问</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">protected</td>
+<td>表示子类访问权限，同包中的可以访问，不同包不能访问，继承也可以访问</td>
+</tr>
+<tr>
+<td align="left">public</td>
+<td>表示全局的，可以公共访问权限，使用了public修饰，则可以在当前项目中任何地方访问</td>
+</tr>
+<tr>
+<td align="left">默认</td>
+<td>表示包访问权限，访问者的包必须和当前定义类的包相同才能访问，没能继承</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">作用域</th>
+<th align="center">当前类</th>
+<th align="center">同一包中</th>
+<th align="center">子孙类</th>
+<th align="center">其他包</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">public</td>
+<td align="center">可以访问</td>
+<td align="center">可以访问</td>
+<td align="center">可以访问</td>
+<td align="center">可以访问</td>
+</tr>
+<tr>
+<td align="left">protected</td>
+<td align="center">可以访问</td>
+<td align="center">可以访问</td>
+<td align="center">可以访问</td>
+<td align="center"><code>不能访问</code></td>
+</tr>
+<tr>
+<td align="left">private</td>
+<td align="center">可以访问</td>
+<td align="center"><code>不能访问</code></td>
+<td align="center"><code>不能访问</code></td>
+<td align="center"><code>不能访问</code></td>
+</tr>
+<tr>
+<td align="left">默认</td>
+<td align="center">可以访问</td>
+<td align="center">可以访问</td>
+<td align="center"><code>不能访问</code></td>
+<td align="center"><code>不能访问</code></td>
+</tr>
+</tbody></table>
+<p><strong>构造器的作用:</strong></p>
+<ul>
+<li>1.创建对象，必须和new 一起使用</li>
+</ul>
+<ul>
+<li>2.完成对象的初始化操作</li>
+</ul>
+<p><strong>构造器的特点：</strong></p>
+<ul>
+<li><p>1.构造器的名称是和当前类名一样的</p>
+</li>
+<li><p>2.禁止有返回类型 千万不能使用void作用返回值。</p>
+</li>
+<li><p>3.在构造器当中 不能使用return</p>
+</li>
+<li><p>4.构造器其它是有返回值，它返回的是当前创建对象的地址 </p>
+<p><strong>默认构造器的特点：</strong></p>
+</li>
+<li><p>1.符合构造器的特点</p>
+</li>
+<li><p>2.没有参数</p>
+</li>
+<li><p>3.如果类使用了public修饰，它创建的默认构造器也会加public</p>
+<p><strong>构造器的重载：</strong></p>
+</li>
+<li><p>方法重载：方法名相同 ，参数不一样。</p>
+</li>
+<li><p>构造器重载：构造器的名相同 ，参数不一样。</p>
+</li>
+</ul>
+<p><strong>状态和行为有：类和对象 之分</strong><br><strong>如果你在字段和方法前添加了static，那么它的字段和方法它就属于类</strong></p>
+<p><strong>特点：</strong></p>
+<ul>
+<li><p>1.static修饰的内容，是随着类的加载而加载的。</p>
+</li>
+<li><p>当JVM把字节码加载到虚拟机当中，static他修饰的成员会自动的加载到内存当中。（方法区）</p>
+</li>
+<li><p>2.static修饰的内容，优先于对象的存在。</p>
+</li>
+<li><p>3.static修饰的内容，被该类型的所有对象所共享</p>
+</li>
+<li><p>4.static修饰的内容，可以直接使用类名来调用。</p>
+</li>
+</ul>
+<ul>
+<li>this:在一个方法当中，要给变量赋值，它会先到方法当中去找有没有该 变量</li>
+</ul>
+<p>​               如果有，就给方法内部的变量赋值，不会往上再去找了，如果没有 ，就往它上一级去找</p>
+<p>​               在方法当中变量前加上了this,就代表直接给对象当中 的字段赋值</p>
+<ul>
+<li>this : “这个”    当前正在使用对象的地址</li>
+</ul>
+<p><strong>使用：</strong></p>
+<ul>
+<li>1.帮我们区分成员变量和局部变量的二异性， 必须得要使用this</li>
+<li>2.在同类当中 ，实例方法的调用，前面其实是有this,可以省略</li>
+<li>3.可以把this做为参数传递</li>
+<li>4.可以当做返回值 返回</li>
+<li>5.static 不能和 this一起使用</li>
+</ul>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1908918989@qq.com </span>
@@ -464,12 +572,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>JDesktopPane如何添加背景图片</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">579</span></p>
+    <p><span class="copy-title">文章标题:</span>第3章 Java面向对象-封装</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">905</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="小雨">小雨</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-04-21, 09:29:50</p>
-    <p><span class="copy-title">最后更新:</span>2020-04-22, 20:46:03</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/04/21/JDesktopPane%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87/" title="JDesktopPane如何添加背景图片">http://yoursite.com/2020/04/21/JDesktopPane%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87/</a>
+    <p><span class="copy-title">发布时间:</span>2020-04-23, 12:22:53</p>
+    <p><span class="copy-title">最后更新:</span>2020-04-23, 20:56:53</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/04/23/%E7%AC%AC3%E7%AB%A0-Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E5%B0%81%E8%A3%85/" title="第3章 Java面向对象-封装">http://yoursite.com/2020/04/23/%E7%AC%AC3%E7%AB%A0-Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E5%B0%81%E8%A3%85/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
